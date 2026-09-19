@@ -1,0 +1,9 @@
+{
+  "name": "The Rive Spa",
+  "short_name": "The Rive Spa",
+  "theme_color": "#7A9E87",
+  "background_color": "#FAF8F5",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": []
+}

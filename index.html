@@ -1,97 +1,73 @@
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>coder-app-name</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <style>
-      /* 内联样式确保主题色立即生效，避免闪烁 */
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
-      html.light,
-      html.light body {
-        background-color: #ffffff !important;
-        color: #000000;
-      }
-      html.dark,
-      html.dark body {
-        background-color: #1a1a1a !important;
-        color: #ffffff;
-      }
-    </style>
-    <script>
-      // 在 React 加载前立即设置主题，避免闪烁
-      (function () {
-        const isInIframe = window.self !== window.top;
-
-        function applyThemeToDOM(theme) {
-          document.documentElement.classList.remove("light", "dark");
-          document.documentElement.classList.add(theme);
-          document.documentElement.setAttribute("data-theme", theme);
-        }
-
-        if (isInIframe) {
-          // 监听父窗口主动推送的主题消息
-          window.addEventListener("message", function (event) {
-            if (event.data && typeof event.data.theme === "string") {
-              const theme = event.data.theme;
-              if (theme === "light" || theme === "dark") {
-                applyThemeToDOM(theme);
-              }
-            }
-          });
-        } else {
-          // 非 iframe 环境，使用默认 light 主题
-          applyThemeToDOM("light");
-        }
-      })();
-    </script>
-      <script>
-      (function () {
-        if (window.self === window.top) return;
-        var reported = {};
-        window.addEventListener("error", function (event) {
-          // 资源加载失败的 error 事件没有 message，此处仅上报 JS 运行时错误
-          if (!event || !event.message) return;
-          var key =
-            event.message + "|" + (event.filename || "") + "|" + (event.lineno || 0);
-          if (reported[key]) return; // 相同错误只上报一次，避免渲染循环刷屏
-          reported[key] = true;
-          try {
-            window.parent.postMessage(
-              {
-                type: "sandbox-runtime-error",
-                payload: {
-                  message: String(event.message).slice(0, 500),
-                  filename: event.filename || "",
-                  lineno: event.lineno || 0,
-                  colno: event.colno || 0,
-                  stack:
-                    event.error && event.error.stack
-                      ? String(event.error.stack).slice(0, 2000)
-                      : ""
-                }
-              },
-              "*"
-            );
-          } catch (e) {
-            /* 上报失败不影响页面运行 */
-          }
-        });
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Spa & Wellness Center in Gomti Nagar, Lucknow | The Rive Spa</title>
+  <meta name="description" content="Premium spa and wellness treatments in Gomti Nagar, Lucknow. Explore Swedish, Balinese, deep tissue, Thai, couple spa and aromatherapy therapies at The Rive Spa." />
+  <link rel="canonical" href="https://www.thecloudspa.in/" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Premium Spa & Wellness Center in Gomti Nagar, Lucknow | The Rive Spa" />
+  <meta property="og:description" content="Premium spa and wellness treatments in Gomti Nagar, Lucknow. Explore Swedish, Balinese, deep tissue, Thai, couple spa and aromatherapy therapies at The Rive Spa." />
+  <meta property="og:url" content="https://www.thecloudspa.in/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=630&fit=crop" />
+  <meta property="og:site_name" content="The Rive Spa" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Premium Spa & Wellness Center in Gomti Nagar, Lucknow | The Rive Spa" />
+  <meta name="twitter:description" content="Premium spa and wellness treatments in Gomti Nagar, Lucknow." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=630&fit=crop" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#7A9E87" />
+  <script>
+    window.__TRACKING_CONFIG = {
+      GTM_ID: 'GTM-XXXXXXX',
+      GA4_ID: 'G-XXXXXXXXXX',
+      ADS_ID: 'AW-XXXXXXXXXX',
+      META_PIXEL_ID: 'META-PIXEL-ID'
+    };
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["HealthAndBeautyBusiness", "LocalBusiness"],
+    "name": "The Rive Spa",
+    "url": "https://www.thecloudspa.in",
+    "telephone": "+91-8303720883",
+    "email": "hello@thecloudspa.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2/463, opp. Sun Motors Showroom, Vivek Khand 2",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "226010",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "26.8575924",
+      "longitude": "81.0006776"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "11:00",
+      "closes": "20:00"
+    },
+    "priceRange": "₹1,499 – ₹5,999",
+    "image": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200",
+    "description": "Premium spa and wellness center in Gomti Nagar, Lucknow offering Swedish, Balinese, deep tissue, Thai, couple spa and aromatherapy therapies."
+  }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
