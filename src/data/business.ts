@@ -1,8 +1,8 @@
 export const business = {
   name: 'The Rive Spa',
   tagline: 'Where Stress Dissolves',
-  domain: 'https://www.thecloudspa.in',
-  email: 'hello@thecloudspa.in',
+  domain: 'https://www.therivespa.com',
+  email: 'hello@therivespa.in',
   phone: '+91-8303720883',
   phoneDisplay: '+91-8303720883',
   phoneTel: '+918303720883',

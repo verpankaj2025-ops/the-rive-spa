@@ -130,7 +130,7 @@ Each service page is unique and comprehensive:
 - **Tagline**: Where Stress Dissolves
 - **Address**: 2/463, opp. Sun Motors Showroom, Vivek Khand 2, Gomti Nagar, Lucknow, Uttar Pradesh 226010
 - **Phone**: +91-8303720883
-- **Email**: hello@thecloudspa.in
+- **Email**: hello@therivespa.com
 - **Hours**: Monday–Sunday, 11:00 AM – 8:00 PM
 - **Price Range**: ₹1,499 – ₹5,999
 - **Coordinates**: 26.8575924, 81.0006776
